@@ -1,0 +1,406 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #8b4513;
+    --accent-color: #d4a017;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --bg-light: #f4f4f4;
+    --text-muted: #666666;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    background-color: #f4f4f4;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--accent-color) !important;
+}
+
+.nav-link {
+    color: var(--text-light) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.navbar .nav-link[href="creator.html"] {
+    color: #28a745 !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link[href="creator.html"]:hover {
+    transform: translateY(-2px);
+}
+
+.navbar .nav-link[href="creator.html"] i {
+    transition: transform 0.3s ease;
+}
+
+.navbar .nav-link[href="creator.html"]:hover i {
+    transform: rotate(360deg);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('../jjj.jpeg') center/cover no-repeat;
+    color: var(--text-light);
+    padding: 6rem 0;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero .lead {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero .btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Center Hero Section */
+.center-hero {
+    min-height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    color: var(--text-light);
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+}
+
+/* Center specific backgrounds */
+.aman-abad-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../aman.jpeg') center/cover no-repeat;
+}
+
+.maira-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../maira.jpeg') center/cover no-repeat;
+}
+
+.bunir-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../oip.jpeg') center/cover no-repeat;
+}
+
+.sher-garh-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../sher.jpeg') center/cover no-repeat;
+}
+
+.ismaila-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../isma.jpeg') center/cover no-repeat;
+}
+
+.mansabdar-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../shiwa.jpeg') center/cover no-repeat;
+}
+
+.hand-stem-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../stem.jpeg') center/cover no-repeat;
+}
+
+/* Content Sections */
+section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 2rem 0;
+    padding: 3rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+.about {
+    padding: 3rem 0;
+}
+
+.about h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.about ul li {
+    margin-bottom: 1rem;
+}
+
+.about .fas {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Photo Gallery */
+.photo-gallery {
+    background: var(--bg-light);
+    padding: 4rem 0;
+}
+
+.photo-gallery .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-gallery .gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-gallery .gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.photo-gallery .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.photo-gallery .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.photo-gallery .section-title h2 {
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.photo-gallery .section-title p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Registration List Styles */
+.registration-list {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.registration-list .table {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-list th {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.registration-list .badge {
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+}
+
+/* Profile Image */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    margin: 0 auto 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    margin-top: 2rem;
+    padding: 3rem 0;
+}
+
+.footer h5 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--accent-color);
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 60vh;
+        padding: 4rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero .lead {
+        font-size: 1.2rem;
+    }
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Components */
+.stat-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.stat-card p {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.stat-card i {
+    color: var(--accent-color);
+}
+
+/* Skills and Expertise */
+.skill-badge {
+    background-color: #28a745;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 0.25rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    color: #28a745;
+}
+
+.skill-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.expertise-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.expertise-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labor Registrations - Watton Tobacco Company</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .registration-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .registration-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .registration-header {
+            background: #28a745;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px 8px 0 0;
+        }
+        .registration-body {
+            padding: 1.5rem;
+        }
+        .registration-id {
+            font-family: monospace;
+            background: #f8f9fa;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Watton Tobacco</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hand-stem.html">Hand Stem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="labor-registration.html">Register New Labor</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4">Labor Registrations</h1>
+                    <p class="lead">View all labor registrations</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Registrations List -->
+    <section class="registrations-list py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2>Recent Registrations</h2>
+                        <a href="labor-registration.html" class="btn btn-success">
+                            <i class="fas fa-plus me-2"></i>New Registration
+                        </a>
+                    </div>
+                    <div id="registrationsList">
+                        <!-- Registrations will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Watton Tobacco Company</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Load and display registrations
+        function loadRegistrations() {
+            const registrationsList = document.getElementById('registrationsList');
+            const registrations = JSON.parse(localStorage.getItem('laborRegistrations')) || [];
+
+            if (registrations.length === 0) {
+                registrationsList.innerHTML = `
+                    <div class="text-center py-5">
+                        <i class="fas fa-clipboard text-muted fa-3x mb-3"></i>
+                        <h3 class="text-muted">No registrations yet</h3>
+                        <p>Start by adding a new labor registration</p>
+                        <a href="labor-registration.html" class="btn btn-success">
+                            <i class="fas fa-plus me-2"></i>Add Registration
+                        </a>
+                    </div>
+                `;
+                return;
+            }
+
+            registrationsList.innerHTML = registrations.reverse().map(reg => `
+                <div class="registration-card">
+                    <div class="registration-header d-flex justify-content-between align-items-center">
+                        <h3 class="mb-0">${reg.fullName}</h3>
+                        <span class="registration-id">${reg.registrationId}</span>
+                    </div>
+                    <div class="registration-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong>Father's Name:</strong> ${reg.fatherName}</p>
+                                <p><strong>CNIC:</strong> ${reg.cnic}</p>
+                                <p><strong>Phone:</strong> ${reg.phone}</p>
+                                <p><strong>Address:</strong> ${reg.address}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>Experience:</strong> ${reg.experience}</p>
+                                <p><strong>Preferred Shift:</strong> ${reg.shift}</p>
+                                <p><strong>Registration Date:</strong> ${new Date(reg.registrationDate).toLocaleDateString()}</p>
+                                <p><strong>Emergency Contact:</strong> ${reg.emergencyContact}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Load registrations when page loads
+        window.addEventListener('load', loadRegistrations);
+    </script>
+</body>
+</html>

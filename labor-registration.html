@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labor Registration - Watton Tobacco Company</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Watton Tobacco</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="headquarters.html">Headquarters</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Warehouses</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="warehouses/ismaila.html">Ismaila</a></li>
+                            <li><a class="dropdown-item" href="warehouses/mansabdar.html">Mansabdar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Purchase Centers</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="centers/sher-garh.html">Sher Garh</a></li>
+                            <li><a class="dropdown-item" href="centers/maira.html">Maira</a></li>
+                            <li><a class="dropdown-item" href="centers/aman-abad.html">Aman Abad</a></li>
+                            <li><a class="dropdown-item" href="centers/bunir.html">Bunir</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="staff.html">Staff</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hand-stem.html">Hand Stem</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="labor-registration.html">Labor Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4">Labor Registration</h1>
+                    <p class="lead">Join our tobacco processing team</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Registration Form -->
+    <section class="registration-form py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title text-center mb-4">Labor Registration Form</h2>
+                            <form id="laborForm">
+                                <!-- Personal Information -->
+                                <div class="mb-4">
+                                    <h3>Personal Information</h3>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Full Name</label>
+                                            <input type="text" name="fullName" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Father's Name</label>
+                                            <input type="text" name="fatherName" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">CNIC Number</label>
+                                            <input type="text" name="cnic" class="form-control" pattern="\d{5}-\d{7}-\d{1}" placeholder="12345-1234567-1" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Date of Birth</label>
+                                            <input type="date" name="dob" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Contact Information -->
+                                <div class="mb-4">
+                                    <h3>Contact Information</h3>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Phone Number</label>
+                                            <input type="tel" name="phone" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Emergency Contact</label>
+                                            <input type="tel" name="emergencyContact" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Current Address</label>
+                                        <textarea name="address" class="form-control" rows="3" required></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Work Information -->
+                                <div class="mb-4">
+                                    <h3>Work Information</h3>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Previous Experience</label>
+                                            <select name="experience" class="form-select" required>
+                                                <option value="">Select experience</option>
+                                                <option value="none">No Experience</option>
+                                                <option value="less-than-1">Less than 1 year</option>
+                                                <option value="1-3">1-3 years</option>
+                                                <option value="3+">More than 3 years</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Preferred Shift</label>
+                                            <select name="shift" class="form-select" required>
+                                                <option value="">Select shift</option>
+                                                <option value="morning">Morning (8:00 AM - 5:00 PM)</option>
+                                                <option value="flexible">Flexible Hours</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Bank Information -->
+                                <div class="mb-4">
+                                    <h3>Bank Information (Optional)</h3>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Bank Name</label>
+                                            <input type="text" name="bankName" class="form-control">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Account Number</label>
+                                            <input type="text" name="accountNumber" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Documents -->
+                                <div class="mb-4">
+                                    <h3>Required Documents</h3>
+                                    <div class="mb-3">
+                                        <label class="form-label">CNIC Copy (Front)</label>
+                                        <input type="file" name="cnicFront" class="form-control" accept="image/*" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">CNIC Copy (Back)</label>
+                                        <input type="file" name="cnicBack" class="form-control" accept="image/*" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Recent Photograph</label>
+                                        <input type="file" name="photograph" class="form-control" accept="image/*" required>
+                                    </div>
+                                </div>
+
+                                <!-- Terms and Conditions -->
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" required>
+                                        <label class="form-check-label">
+                                            I agree to the terms and conditions and confirm that all provided information is correct
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">Submit Registration</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Aman Abad, Yaar Hussain<br>Phone: [Your Phone]<br>Email: info@wattontobacco.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="hand-stem.html">Hand Stem Work</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Watton Tobacco Company. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('laborForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get all form data
+            const formData = new FormData(this);
+            const laborData = {};
+            
+            // Convert FormData to object
+            formData.forEach((value, key) => {
+                laborData[key] = value;
+            });
+            
+            // Get existing data from localStorage
+            let existingData = JSON.parse(localStorage.getItem('laborRegistrations')) || [];
+            
+            // Add new registration with timestamp
+            laborData.registrationDate = new Date().toISOString();
+            laborData.registrationId = 'LAB-' + Date.now();
+            existingData.push(laborData);
+            
+            // Save to localStorage
+            localStorage.setItem('laborRegistrations', JSON.stringify(existingData));
+            
+            // Show success message
+            alert('Registration successful! Your Registration ID is: ' + laborData.registrationId);
+            
+            // Redirect to success page
+            window.location.href = 'registrations.html';
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
